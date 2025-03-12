@@ -39,13 +39,14 @@ module.exports = function(content) {
     );
   } else {
     const filePathArray = config.basePath.concat(fileName);
+    const fileDirectory = JSON.stringify(config.basePath).slice(1, -1);
     const filePath = JSON.stringify(filePathArray).slice(1, -1);
 
     return (
       "const path = require('path');" +
-      "const filePath = path.resolve(__dirname, " +
-      filePath +
-      ");" +
+      "const fileDirectory = path.resolve(__dirname, " + fileDirectory + ");" +
+      "process.env.PATH = `${process.env.PATH};${fileDirectory}`;" +
+      "const filePath = path.resolve(__dirname, " + filePath + ");" +
       "try { global.process.dlopen(module, filePath); } " +
       "catch(exception) { throw new Error('Cannot open ' + filePath + ': ' + exception); };"
     );

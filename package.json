@@ -1,7 +1,7 @@
 {
-  "author": "Maciej Małecki <smt116@gmail.com>",
+  "author": "Dylan <2894220@gmail.com>",
   "dependencies": {},
-  "description": "Loader for Node native extensions",
+  "description": "Loader for node-nim extensions",
   "keywords": [
     "electron",
     "loader",
@@ -11,8 +11,8 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "name": "native-ext-loader",
-  "repository": "https://github.com/smt116/node-native-loader",
+  "name": "node-nim-loader",
+  "repository": "https://github.com/netease-im/node-nim-loader",
   "scripts": {},
-  "version": "2.3.0"
+  "version": "1.0.0"
 }

@@ -1,6 +1,6 @@
-# Node Native Loader
+# Node NIM Loader
 
-Package for loading native files in Node and Electron applications. The project is inspired by the [node-addon-loader](https://github.com/ushu/node-addon-loader). It works in the similar way but **allows to build path at runtime**.
+Package for loading native files in Node and Electron applications. The project is inspired by the [node-addon-loader](https://github.com/ushu/node-addon-loader) and  [node-native-ext-loader](https://github.com/smt116/node-native-ext-loader). It works in the similar way but **allows to build path at runtime**.
 
 ## Installation
 
@@ -8,10 +8,10 @@ Add the package to the development dependencies:
 
 ```bash
 # using npm:
-$ npm install native-ext-loader --save-dev
+$ npm install node-nim-loader --save-dev
 
 # using yarn:
-$ yarn add --dev native-ext-loader
+$ yarn add --dev node-nim-loader
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ module: {
   rules: [
     {
       test: /\.node$/,
-      loader: "native-ext-loader"
+      loader: "node-nim-loader"
     }
   ];
 }
@@ -38,7 +38,7 @@ module: {
   rules: [
     {
       test: /\.node$/,
-      loader: "native-ext-loader",
+      loader: "node-nim-loader",
       options: {
         rewritePath: path.resolve(__dirname, "dist")
       }
